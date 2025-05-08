@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Soil Moisture Dashboard</title>
+    <style>
+      body {
+        font-family: Arial;
+        text-align: center;
+        padding: 40px;
+      }
+      .status {
+        font-size: 1.5rem;
+        margin: 20px;
+      }
+      img {
+        width: 200px;
+        height: auto;
+      }
+      iframe {
+        width: 100%;
+        height: 500px;
+        border: none;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Soil Moisture Monitor 🌱</h1>
+    <p>Current Moisture Value: <strong>246</strong></p>
+    <div class="status">Status: <strong>over watered</strong></div>
+    <img src="{{ gif_url }}" alt="Plant Status" />
+
+    <h2>Live Grafana Visualization</h2>
+    <iframe
+      src="http://localhost:3000/d-solo/bekx3hfv0mxogc/soilmoisture?orgId=1&from=1746394329737&to=1746405129737&timezone=browser&panelId=1&__feature.dashboardSceneSolo"
+      width="450"
+      height="200"
+      frameborder="0"
+    ></iframe>
+  </body>
+</html>
