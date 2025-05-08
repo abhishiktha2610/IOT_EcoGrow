@@ -44,7 +44,7 @@ def get_latest_soil_value():
         print("Raw Response:\n", response.text)
 
         if response.status_code != 200:
-            print("❌ InfluxDB Query Error:", response.text)
+            print("InfluxDB Query Error:", response.text)
             return None
 
         # Parse CSV-like response to find _value
@@ -61,7 +61,7 @@ def get_latest_soil_value():
                 print("⚠️  Parsing error:", e)
 
     except Exception as e:
-        print("❌ Exception while querying InfluxDB:", e)
+        print("Exception while querying InfluxDB:", e)
 
     return None
 
@@ -92,7 +92,6 @@ def get_latest_soil_value():
             columns = line.split(",")
             if len(columns) > 0 and "_value" in line:
                 try:
-                    # Try parsing the value from the last column
                     value = float(columns[-1].split()[-1])
                     return value
                 except Exception as e:
