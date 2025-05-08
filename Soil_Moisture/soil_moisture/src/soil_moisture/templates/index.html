@@ -26,8 +26,8 @@
   </head>
   <body>
     <h1>Soil Moisture Monitor 🌱</h1>
-    <p>Current Moisture Value: <strong>246</strong></p>
-    <div class="status">Status: <strong>over watered</strong></div>
+    <p>Current Moisture Value: <strong>{{ value }}</strong></p>
+    <div class="status">Status: <strong>{{ status }}</strong></div>
     <img src="{{ gif_url }}" alt="Plant Status" />
 
     <h2>Live Grafana Visualization</h2>
