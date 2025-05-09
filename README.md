@@ -1,4 +1,4 @@
-# IOT_EcoGro# 🌱 IOT_EcoGrow - Smart Soil Monitoring System
+# 🌱 IOT_EcoGrow - Smart Soil Monitoring System
 
 IOT_EcoGrow is a smart, end-to-end IoT system for real-time soil moisture and humidity monitoring. It collects sensor data via Arduino, transmits it securely via MQTT to HiveMQ Cloud, stores it in InfluxDB using Telegraf, and visualizes it with Grafana. A Flask web app also provides a friendly UI with live graphs and dynamic plant status GIFs.
 
